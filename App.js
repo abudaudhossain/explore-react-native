@@ -1,20 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, Linking, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <View style={styles.body}>
+      <Text style={styles.text}>My first App</Text>
+      <Button title='facebook' onPress={()=>Linking.openURL("https://www.facebook.com")}></Button>
+     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  body: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: "red",
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: "center",
   },
-});
+  text: {
+    color: "white",
+    fontSize: 18,
+    fontWeight: "bold",
+    fontStyle: "italic",
+    marginBottom: 10,
+  },
+  
+
+})
